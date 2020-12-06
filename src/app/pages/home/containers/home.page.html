@@ -2,7 +2,7 @@
 
     <div class="search-container">
         <div class="form-group">
-            <label>{{ text }}</label>
+            <label>Pesquisar</label>
             <div>
                 <input class="form-control" [formControl]="searchControl">
                 <button class="btn btn-dark" (click)="doSearch()">Pesquisar</button>
@@ -12,6 +12,17 @@
         <div class="form-group">
             <label>Pesquisar com <i>autocomplete</i></label>
         </div>
+    </div>
+    
+    <jv-loader *ngIf="loading$ | async"></jv-loader>
+
+    <div *ngIf="!(loading$ | async) && !error$ | async)">
+        <jv-current-weather [cityWeather]="cityWeather"
+                            (toggleBookmark)="onToggleBookmark()"></jv-current-weather>>
+    </div>
+
+    <div *ngIf="!(loading$ | async) && error$ | async">
+        <a>Tentar novamente</a>
     </div>
 
 </div>

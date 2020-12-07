@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailsPage } from './containers/details/details.page';
 import { RouterModule } from '@angular/router';
-import { DetailsGuard } from './containers/services/details.guard';
+import { DetailsGuard } from './services/details.guard';
 
 
 

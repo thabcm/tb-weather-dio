@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.0",
+    "@angular/cdk": "^11.0.1",
     "@angular/common": "~9.1.0",
     "@angular/compiler": "~9.1.0",
     "@angular/core": "~9.1.0",
@@ -24,6 +25,9 @@
     "@ngrx/store": "^10.1.0",
     "@ngrx/store-devtools": "^10.1.0",
     "bootstrap": "^3.3.7",
+    "js-search": "^2.0.0",
+    "moment-timezone": "^0.5.32",
+    "ngx-bootstrap": "^6.2.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

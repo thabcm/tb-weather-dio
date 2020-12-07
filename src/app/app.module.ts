@@ -11,6 +11,8 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { CurrentWeatherComponent } from './pages/home/components/current-weather/current-weather.component';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { reducers } from './shared/state/app.reducer';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,10 @@ import { CurrentWeatherComponent } from './pages/home/components/current-weather
     HttpClientModule,
     HomeModule,
     BookmarksModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
+    StoreRouterConnectingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
